@@ -1,15 +1,16 @@
-const menuBtn = document.querySelector('.navbar');
-document.querySelector('#bars-icon').onclick = () => {
-    menuBtn.classList.toggle('active');
-    document.querySelector('.bars-icon').classList.toggle('active');
+const menu = document.querySelector('#menu-bars');
+const navbar = document.querySelector('.navbar');
+
+menu.onclick = () =>{
+  menu.classList.toggle('fa-times');
+  navbar.classList.toggle('active');
 }
 const searchForm = document.querySelector('.search-form');
 document.querySelector('#search-icon').onclick = () => {
     searchForm.classList.toggle('active');
-    menuBtn.classList.remove('active');
-    document.querySelector('.search-icon').classList.toggle('active');
-    document.querySelector('.bars-icon').classList.remove('active');
+    navBar.classList.remove('active');
 }
+
 document.querySelector('#times-icon').onclick = () => {
     searchForm.classList.remove('active');
     document.querySelector('.search-icon').classList.remove('active');
